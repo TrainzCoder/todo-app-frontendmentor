@@ -1,0 +1,63 @@
+:root {
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  /* --Light-Grayish-Blue: hsl(236, 33%, 92%); */
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  /* --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%); */
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+body.dark {
+  background-color: var(--Very-Dark-Blue);
+}
+
+body.dark .jumbotron {
+  background-image: url("../images/bg-desktop-dark.jpg");
+}
+
+body.dark .form-group input,
+body.dark .list-group-item,
+body.dark .action-list {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  border-color: hsl(233, 14%, 35%);
+}
+
+body.dark .form-group input {
+  color: var(--Light-Grayish-Blue);
+  box-shadow: none;
+}
+
+body.dark .list-group-item p {
+  color: var(--Light-Grayish-Blue);
+}
+
+body.dark .list-group-item.done p {
+  color: var(--Dark-Grayish-Blue);
+}
+
+body.dark .list-group-item.done p::before {
+  border-bottom: 2px solid var(--Dark-Grayish-Blue);
+}
+
+body.dark .filter a {
+  color: var(--Dark-Grayish-Blue);
+}
+
+body.dark .filter a:hover {
+  color: var(--Light-Grayish-Blue);
+}
+
+body.dark .action-list p:hover {
+  color: var(--Light-Grayish-Blue);
+}
+
+.attribution {
+  color: var(--Dark-Grayish-Blue);
+}
+
+@media (max-width: 768px) {
+  body.dark .jumbotron {
+    background-image: url("../images/bg-mobile-dark.jpg");
+  }
+}
