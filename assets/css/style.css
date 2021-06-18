@@ -9,9 +9,14 @@
   --Bright-Blue: hsl(220, 98%, 61%);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
-  box-sizing: border-box;
   font-size: 18px;
   font-family: "Josefin Sans";
 }
@@ -101,8 +106,8 @@ p {
 .check-todo {
   width: 25px;
   height: 25px;
-  border-radius: 50%;
   border: 1px solid var(--Dark-Grayish-Blue);
+  border-radius: 50%;
   transition: all 0.3s;
   position: relative;
   margin-right: 1em;
@@ -162,13 +167,14 @@ p {
 /* === Action List === */
 
 .action-list {
-  border: 1px solid var(--Light-Grayish-Blue);
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 10px 10px;
+  border-top: 1px solid var(--Light-Grayish-Blue);
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 1.25rem;
   align-items: center;
-  background: white;
+  background: #fff;
+  position: relative;
 }
 
 .action-list .item-left {
@@ -209,5 +215,24 @@ p {
 @media (max-width: 768px) {
   .jumbotron {
     background-image: url("../images/bg-mobile-light.jpg");
+  }
+}
+
+@media (max-width: 516px) {
+  .todo-container {
+    max-width: calc(100% - 2em);
+  }
+
+  .action-list .filter {
+    position: absolute;
+    top: 4em;
+    left: 0;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
   }
 }
