@@ -19,8 +19,8 @@ body.dark .jumbotron {
 body.dark .form-group input,
 body.dark .list-group-item,
 body.dark .action-list {
-  background-color: var(--Very-Dark-Grayish-Blue);
   border-color: hsl(233, 14%, 35%);
+  background-color: var(--Very-Dark-Grayish-Blue);
 }
 
 body.dark .form-group input {
@@ -50,6 +50,10 @@ body.dark .filter a:hover {
 
 body.dark .action-list p:hover {
   color: var(--Light-Grayish-Blue);
+}
+
+body.dark .action-list .filter {
+  background-color: var(--Very-Dark-Grayish-Blue);
 }
 
 .attribution {
