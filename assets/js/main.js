@@ -19,7 +19,7 @@ let itemLeft = document.querySelector('.item-left span');
 itemLeft.innerHTML = document.querySelectorAll(".list-group-item").length;
 
 input.addEventListener('keydown', e => {
-  if(e.code === "Enter"){
+  if(e.keyCode == '13'){
     let inputSanitize = input.value.replace(/(<([^>]+)>)/gi, "");
     
     $('.list-group').append(showListItem(inputSanitize));
